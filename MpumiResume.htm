@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
   <head>
-    <title>Mpumelelo's Digital Resume</title>
-    <link rel = "stylesheet" type = "text/css" href = "css/stylesheet.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+      <!-- Required meta tags-->
+      <meta charset = "utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Bootstrap CSS-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+      crossorigin="anonymous">
+      <!-- My own stylesheet -->
+      <link rel = "stylesheet" type = "text/css" href = "css/stylesheet.css">
+
+      <title>Mpumelelo's Digital Resume</title>
+    </head>
+
+
   <body>
-      <!-- This is the start of the code. I have sectioned the entire code into a class called container so I am able to structure everything in a flex box. -->
-    <section class = "container" >
-        <!-- Stylistically I would like the code in the main flex box to have two elements that are side by side. This is the code for the left element -->
-       <div class = "left-side">    
-           <!-- Image for the cover photo. The picture element is used to adjust the size of the cover photo depending
-                on screen size  -->
+    <section class = "container-fluid" >
+        <div class = "row">
+           <div class = "col">   
+        
             <picture>
                 <source media = "(max-width: 650px)" srcset = "images/cover-small.jpg">
                 <source media ="(max-width: 1400px)" srcset = "images/cover-med.jpg">
                 <img id = "profile-pic" src = "images/cover.jpg" alt = "cv cover image" >
             </picture>
            
-           <!-- This code is for my personal information. It is made up of the heading followed by two list elements which contain both my address and cellphone number. 
-             Each list element has an image as well that are icons for aesthetic-->
            <h2>Personal Information</h2>
            
            <ul class = "lists" >
@@ -42,9 +49,6 @@
             </li>
             
             </ul>
-
-            <!-- This is the section where I write my skills. There is a skills ID tag as I would like to create a navigation menu on the CV and 
-            be able to call up the skills section. -->
             <h2 id = skills> Skills </h2>
             <ul class = "lists">
                 <li>Programming Languages</li>
@@ -59,79 +63,64 @@
                 <li>Laboratory Health and Safety </li>
                 <li>Customer Service / Sales Expertise </li>
             </ul>
+           </div>
+           <div class ="col">
+            <h1 class = "container-fluid"> Mpumelelo Zondo</h1>
+            <div class = "row">
+                <div class = "container-fluid">
+                     <p class = "paragraphs" >I am currently enrolled in my Master's at the University of Cape Town (UCT) specializing in Epidemiology 
+                     and Biostatistics. Outside of UCT I am also enrolled at CodeSpace Academy specializing in Software Development.  
+                     I am a determined and well rounded individual who is always eager to learn and grow.
+                     Outside of my studies I am Wine Enthusiast as well an Adrenaline Junkie. I am extremely sociable 
+                     and enjoy engaging with new people and learning from those around me.
+                     </p>
+                     
+                     <nav class = "nav-menu">
+                         <h2>Menu</h2>
+                         <ul class = "lists">
+                             <li> <a href = "#education"> Education </a> </li>
+                             <li> <a href = "#experience"> Experience </a> </li>
+                             <li> <a href = "#skills"> Skills </a> </li>
+                         </ul> 
+                      </nav>
+                     
+                      <h2 id = education> Education</h2>
+                      <h4>MSc Epidemiology and Biostatistics, University of Cape Town</h4>
+                      <h5>Feb 2022 - Current </h5>
+                      <h4>Bachelor of Medical Science Honors in Bioinformatics, University of Cape Town</h4>
+                      <h5>Jan 2020 - Dec 2020</h5> 
+                      <ul>
+                          <li>First Class Honors 76.5%</li>
+                          <li>Modules Completed:</li>
+                              <ul>
+                                  <li>Introduction into Bioinformatics</li>
+                                  <li>Introduction into R and Study Design</li>
+                                  <li>High Throughput Biology </li>
+                                  <li>Population Genetics and Pharmacodynamics </li>
+                              </ul>
+                      </ul>
+                      <h4>Bachelor of Science in Biochemistry and Human Physiology and Anatomy, University of Cape Town</h4>
+                      <h5>Feb 2016 - Nov 2019</h5>
+                      <h4>National Senior Certificate, Brescia House Ursuline Convent</h4>
+                      <h5>Jan 2003 - Nov 2015</h5>
+                      <ul >   
+                          <li>2 A's (80 % - 100 %)</li>
+                          <li>4 B's (70% - 79%)</li>
+                      </ul>
+                  
+                      <h2 id = experience> Experience</h2>
+                      <h4>Market Manager, Hoghouse Brewing Company</h4>
+                      <h5>Feb 2019 - Nov 2019</h5>
+                      <p class = "paragraphs">Running the Hoghouse stall at the Oranjezicht City Farm Market. Duties included staffing, 
+                      handling customer service, selling of products, daily cash up and reporting.
+                     </p>
+                </div> 
 
-            
-         
-        </div>
-        <!-- I would like to subdivide my second flex box thus have called it container 2 -->
-        <div class = "container2">
-        <!-- The first element of my subdivided flex box -->
-        <div class = "heading">
-            <h1 class = "name"> Mpumelelo Zondo</h1> 
-        </div>
-        <!-- This section is called right side as this is what I would like to the the second element of my subdivided flex box  -->
-        <div class = "right-side">
-            
-            <!-- This div is called contents as it has the main information in the cv-->
-            <div class = "contents">
-            <!-- Introduction paragraph -->
-            <p class = "paragraphs" >I am currently enrolled in my Master's at the University of Cape Town (UCT) specializing in Epidemiology 
-            and Biostatistics. Outside of UCT I am also enrolled at CodeSpace Academy specializing in Software Development.  
-            I am a determined and well rounded individual who is always eager to learn and grow.
-            Outside of my studies I am Wine Enthusiast as well an Adrenaline Junkie. I am extremely sociable 
-            and enjoy engaging with new people and learning from those around me.</p>
-            
-            <!-- This is the navigation menu section. It has a heading called menu and is followed by a list.
-            This list references my unique IDs in the code so that when clicked on it goes to the specific section-->
-            <nav class = "nav-menu">
-                <h2>Menu</h2>
-                <ul class = "lists">
-                    <li> <a href = "#education"> Education </a> </li>
-                    <li> <a href = "#experience"> Experience </a> </li>
-                    <li> <a href = "#skills"> Skills </a> </li>
-                </ul> 
-             </nav>
-      
-            
-                <!-- This list is to list my academic achievements. The unique ID education is used as this is a section that I have linked 
-                to the navigation menu. -->
-                <h2 id = education> Education</h2>
-                <h4>MSc Epidemiology and Biostatistics, University of Cape Town</h4>
-                <h5>Feb 2022 - Current </h5>
-                <h4>Bachelor of Medical Science Honors in Bioinformatics, University of Cape Town</h4>
-                <h5>Jan 2020 - Dec 2020</h5> 
-                <ul>
-                    <li>First Class Honors 76.5%</li>
-                    <li>Modules Completed:</li>
-                        <ul>
-                            <li>Introduction into Bioinformatics</li>
-                            <li>Introduction into R and Study Design</li>
-                            <li>High Throughput Biology </li>
-                            <li>Population Genetics and Pharmacodynamics </li>
-                        </ul>
-                </ul>
-                <h4>Bachelor of Science in Biochemistry and Human Physiology and Anatomy, University of Cape Town</h4>
-                <h5>Feb 2016 - Nov 2019</h5>
-                <h4>National Senior Certificate, Brescia House Ursuline Convent</h4>
-                <h5>Jan 2003 - Nov 2015</h5>
-                <ul >   
-                    <li>2 A's (80 % - 100 %)</li>
-                    <li>4 B's (70% - 79%)</li>
-                </ul>
-                <!-- This section is to list my work experience. I have included a unique ID tag for work experience as it is a section 
-                that is referenced in the navigation menu -->
-                <h2 id = experience> Experience</h2>
-                <h4>Market Manager, Hoghouse Brewing Company</h4>
-                <h5>Feb 2019 - Nov 2019</h5>
-                <p class = "paragraphs">Running the Hoghouse stall at the Oranjezicht City Farm Market. Duties included staffing, 
-                handling customer service, selling of products, daily cash up and reporting.</p>
-            </div>
-        </div>
-            
+           </div>
         </div>
 
+        </div>
     </section>
-    <!-- This is the footer element of my CV that is comprised of links to my facebook, linkedin and gmail-->
     <footer>
         <h2>Links</h2>
         <!-- This list has images that when clicked on will open in a new tab.-->
@@ -153,7 +142,9 @@
 
     </footer>
 
-    
-   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous">
+    </script>
   </body>
 </html>
